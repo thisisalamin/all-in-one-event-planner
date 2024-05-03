@@ -2,7 +2,7 @@
 /**
  * Plugin Name: All-in-One Event Planner
  * Plugin URI: https://wordpress.org/plugins/aio-event-planner/
- * Description: All-in-One Event Planner is a plugin that allows you to create and manage events on your website.
+ * Description: All-in-One Event Planner is a comprehensive WordPress plugin that empowers you to effortlessly create, manage, and showcase events on your website. Whether you're organizing conferences, workshops, seminars, or social gatherings, this plugin provides the tools you need to streamline your event management process.
  * Version: 1.0
  * Author: ByteDazzle
  * Author URI: https://bytedazzle.com/
@@ -59,6 +59,8 @@ if ( ! class_exists( 'AIO_Event_Planner' ) ) {
 		 * Initialize the plugin.
 		 */
 		public function init() {
+			// Add setting link to plugin page.
+			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'aio_event_settings_link' ) );
 			// Load the AIO_Metabox class.
 			include_once plugin_dir_path( __FILE__ ) . 'includes/admin/class-aio-event-metabox.php';
 			new AIO_Event_Planner\Includes\Admin\AIO_Metabox();
@@ -107,6 +109,18 @@ if ( ! class_exists( 'AIO_Event_Planner' ) ) {
 				wp_enqueue_style( 'aio-event-planner-frontend-css', plugin_dir_url( __FILE__ ) . 'assets/frontend/css/style.css', array(), '1.0.0', 'all' );
 				wp_enqueue_script( 'aio-event-planner-frontend-js', plugin_dir_url( __FILE__ ) . 'assets/frontend/js/main.js', array( 'jquery' ), '1.0.0', true );
 			}
+		}
+
+		/**
+		 * Add setting link to plugin page.
+		 *
+		 * @param array $links The array of plugin action links.
+		 * @return array
+		 */
+		public function aio_event_settings_link( $links ) {
+			$settings_link = '<a href="edit.php?post_type=event&page=event-calendar">' . esc_html__( 'Upcoming Events', 'aio-event-planner' ) . '</a>';
+			array_unshift( $links, $settings_link );
+			return $links;
 		}
 	}
 }
