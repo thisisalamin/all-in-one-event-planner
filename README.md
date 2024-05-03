@@ -10,12 +10,10 @@ All-in-One Event Planner is a comprehensive WordPress plugin that empowers you t
 
 ## Features
 
-- **Intuitive Event Creation**: Effortlessly create events with customizable details such as date, time, location, description, and featured images.
+- **Intuitive Event Creation**: Effortlessly create events with customizable details such as date, time, description, and featured images.
 - **Event Management**: Seamlessly manage all your events from a centralized dashboard within your WordPress admin panel.
 - **Event Calendar**: Access a dynamic event calendar to view all upcoming events at a glance, making it easy for visitors to plan their schedules.
 - **Event Categories and Tags**: Organize your events efficiently by assigning categories and tags, allowing users to filter events based on their interests.
-- **Event Registration and Tickets**: Enable event registration and ticketing functionality to streamline the RSVP process and manage attendee information effectively.
-- **Customizable Templates**: Customize event templates to match your website's design and branding, ensuring a cohesive user experience.
 - **Responsive Design**: Enjoy a fully responsive design that ensures optimal viewing and interaction across various devices and screen sizes.
 - **Localization Support**: Fully translatable with support for multiple languages, making it accessible to a global audience.
 - **Extensible and Developer-Friendly**: Extend the functionality of the plugin through hooks and filters, or contribute to its development on GitHub.
@@ -33,8 +31,7 @@ All-in-One Event Planner is a comprehensive WordPress plugin that empowers you t
 2. Create new events by clicking on the 'Add New' button within the 'Events' submenu.
 3. Customize event details such as date, time, location, description, and featured images.
 4. Assign categories and tags to your events to organize them effectively.
-5. Enable event registration and ticketing if needed, and configure related settings.
-6. Manage your events efficiently using the intuitive interface provided by the plugin.
+5. Manage your events efficiently using the intuitive interface provided by the plugin.
 
 ## Contributing
 
