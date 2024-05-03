@@ -1,0 +1,17 @@
+{
+    "name": "alamin/aio-event-planner",
+    "description": "All-in-One Event Planner is a plugin that allows you to create and manage events on your website.",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Alamin\\AioEventPlanner\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thisisalamin",
+            "email": "thisismdalamin@gmail.com"
+        }
+    ],
+    "require": {}
+}

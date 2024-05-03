@@ -1,0 +1,179 @@
+.aio-calander-table{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-top: 20px solid #1A252F;
+
+}
+
+.aio-event-metabox-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aio-event-column {
+  flex: 1;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+/* Adjust width of the input fields */
+.aio-event-metabox-date input[type="date"],
+.aio-event-metabox-time input[type="time"] {
+  width: calc(100% - 50px); /* Adjust width as needed */
+}
+
+.aio-event-metabox-date,
+.aio-event-metabox-time{
+  font-size: 15px;
+}
+
+td.date-box {
+  height: 50px;
+  text-align: center;
+}
+
+.aio-event-header{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aio-button-group {
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+  border-radius: 0.25em;
+  background-color: #1A252F;
+}
+
+.aio-button {
+  background-color: #1E2B37;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.5em 0.85em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.aio-button a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.aio-button.active {
+  background-color: #1A252F;
+  color: #fff;
+  text-decoration: none;
+}
+
+.aio-button:hover {
+  background-color: #1A252F;
+  color: #fff;
+  text-decoration: none;
+}
+
+.aio-event-section h2{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.aio-button-today{
+  background-color: #75818c;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.5em 0.85em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.aio-button-today a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.aio-table{
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.aio-table th{
+  border: 1px solid #ddd;
+}
+
+.aio-table td{
+  border: 1px solid #ddd;
+  height: 60px;
+  vertical-align: top;
+  text-align: right;
+  padding: 10px;
+
+}
+
+.aio-table thead{
+  border: 1px solid #ddd;
+}
+
+.event-title{
+  background-color: #3788D8;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 11px;
+  border-radius: 10px;
+  margin-bottom: -10px;
+}
+
+
+.event-title:hover{
+  color: #fff;
+}
+
+
+.notice-info{
+  background-color: #1E2B37;
+  display: flex;
+  color: #fff;
+  font-size: 16px;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.notice-info a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.notice-info p{
+  font-size: 15px;
+}
+
