@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: All-in-One Event Planner
- * Plugin URI: https://wordpress.org/plugins/aio-event-planner/
+ * Plugin URI: https://github.com/thisisalamin/all-in-one-event-planner
  * Description: All-in-One Event Planner is a comprehensive WordPress plugin that empowers you to effortlessly create, manage, and showcase events on your website. Whether you're organizing conferences, workshops, seminars, or social gatherings, this plugin provides the tools you need to streamline your event management process.
  * Version: 1.0
- * Author: ByteDazzle
- * Author URI: https://bytedazzle.com/
+ * Author: Mohamed Alamin
+ * Author URI: https://profiles.wordpress.org/alaminit/
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: aio-event-planner
