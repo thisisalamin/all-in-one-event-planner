@@ -38,21 +38,12 @@ if ( ! class_exists( 'AIO_Event_Planner' ) ) {
 		public function __construct() {
 			// Initialize the plugin.
 			add_action( 'init', array( $this, 'init' ) );
+
+			// Register post type and taxonomy.
+			add_action( 'init', array( $this, 'register_post_type_and_taxonomy' ) );
+
 			// Load the plugin text domain.
 			add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
-
-			// Include the AIO_Register_Post_Type class.
-			include_once plugin_dir_path( __FILE__ ) . 'includes/admin/class-aio-event-register-post-type.php';
-			$aio_register = new AIO_Event_Planner\Includes\Admin\AIO_Register_Post_Type();
-			add_action( 'init', array( $aio_register, 'aio_event_register_post_type' ) );
-			add_action( 'init', array( $aio_register, 'aio_event_register_taxonomy' ) );
-		}
-
-		/**
-		 * Load the plugin text domain for translation.
-		 */
-		public function load_plugin_textdomain() {
-			load_plugin_textdomain( 'aio-event-planner', false, dirname( plugin_basename( AIO_EVENT_PLANNER_PLUGIN_FILE ) ) . '/languages/' );
 		}
 
 		/**
@@ -82,6 +73,31 @@ if ( ! class_exists( 'AIO_Event_Planner' ) ) {
 
 			// Load frontend assets.
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_frontent_assets' ) );
+		}
+
+		/**
+		 * Register post type and taxonomy.
+		 */
+		public function register_post_type_and_taxonomy() {
+			// Include the AIO_Register_Post_Type class.
+			include_once plugin_dir_path( __FILE__ ) . 'includes/admin/class-aio-event-register-post-type.php';
+			$aio_register = new AIO_Event_Planner\Includes\Admin\AIO_Register_Post_Type();
+			// Register post type and taxonomy.
+			$aio_register->aio_event_register_post_type();
+			$aio_register->aio_event_register_taxonomy();
+
+			// Flush rewrite rules.
+			flush_rewrite_rules();
+		}
+
+
+
+
+		/**
+		 * Load the plugin text domain for translation.
+		 */
+		public function load_plugin_textdomain() {
+			load_plugin_textdomain( 'aio-event-planner', false, dirname( plugin_basename( AIO_EVENT_PLANNER_PLUGIN_FILE ) ) . '/languages/' );
 		}
 
 		/**
@@ -123,6 +139,8 @@ if ( ! class_exists( 'AIO_Event_Planner' ) ) {
 			return $links;
 		}
 	}
+
+
 }
 
 // Instantiate the AIO_Event_Planner class.

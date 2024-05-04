@@ -144,7 +144,7 @@ class AIO_Event_Calender {
 								$day_week = 0;
 								echo '</tr><tr>';
 							}
-							$event = ( isset( $events[ $day ] ) ) ? $events[ $day ] : '';
+							$event = ( isset( $events[ sprintf( '%02d', $day ) ] ) ) ? $events[ sprintf( '%02d', $day ) ] : '';
 							echo '<td>';
 							echo '<strong>' . esc_html( $day ) . '</strong><br>';
 								// Check if events exist for this day.

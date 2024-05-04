@@ -18,7 +18,7 @@ class AIO_Single_Event {
 	 * Class constructor.
 	 */
 	public function __construct() {
-		add_filter( 'the_content', array( $this, 'aio_single_event_content' ) );
+			add_filter( 'the_content', array( $this, 'aio_single_event_content' ) );
 	}
 
 	/**
@@ -38,9 +38,11 @@ class AIO_Single_Event {
 	 * @return string The modified content with event details added.
 	 */
 	public function aio_single_event_content( $content ) {
-		$event_date = '';
-		$event_time = '';
+
 		if ( is_singular( 'event' ) ) {
+			$event_date = '';
+			$event_time = '';
+
 			$event_id   = get_the_ID();
 			$event_date = get_post_meta( $event_id, '_aio_event_date', true );
 			$event_date = gmdate( 'F j, Y', strtotime( $event_date ) );
@@ -48,17 +50,20 @@ class AIO_Single_Event {
 			$event_time = get_post_meta( $event_id, '_aio_event_time', true );
 			// Convert the time to 12 hour format.
 			$event_time = gmdate( 'h:i a', strtotime( $event_time ) );
-		}
 
-		ob_start();
-		?>
-		<div class="aio-event-details">
-			<p><strong>Event Date:</strong> <?php echo esc_html( $event_date ); ?></p>
-			<p><strong>Event Time:</strong> <?php echo esc_html( $event_time ); ?></p>
-		</div> 
-		<?php
-		$event_details = ob_get_clean();
-		$content      .= $event_details;
+			if ( get_post_type( $event_id ) === 'event' ) {
+				ob_start();
+				?>
+				<div class="aio-event-details">
+					<p><strong>Event Date:</strong> <?php echo esc_html( $event_date ); ?></p>
+					<p><strong>Event Time:</strong> <?php echo esc_html( $event_time ); ?></p>
+				</div> 
+				<?php
+				$event_details = ob_get_clean();
+
+				$content .= $event_details;
+			}
+		}
 		return $content;
 	}
 }
