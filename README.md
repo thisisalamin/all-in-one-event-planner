@@ -20,7 +20,7 @@ All-in-One Event Planner is a comprehensive WordPress plugin that empowers you t
 
 ## Installation
 
-1. Download the plugin zip file from the [WordPress Plugin Repository](https://wordpress.org/plugins/aio-event-planner/) or clone the repository.
+1. Download the plugin zip file from the [WordPress Plugin Repository](https://github.com/thisisalamin/all-in-one-event-planner/) or clone the repository.
 2. Upload the plugin directory to the `/wp-content/plugins/` directory on your WordPress site.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 4. Configure the plugin settings as needed.
@@ -39,7 +39,7 @@ Contributions are welcome! Whether you'd like to report a bug, suggest a feature
 
 ## Support
 
-If you encounter any issues or have any questions about the plugin, please don't hesitate to reach out to us. You can contact us through the [support forum](https://wordpress.org/support/plugin/aio-event-planner/) on WordPress.org or via [email](mailto:support@example.com).
+If you encounter any issues or have any questions about the plugin, please don't hesitate to reach out to us. You can contact us through the [support forum](https://github.com/thisisalamin/all-in-one-event-planner/issues) on WordPress.org or via [email](mailto:thisismdalamin.com).
 
 ## License
 
